@@ -1,0 +1,7 @@
+node_modules/
+.env
+_pycache_
+__pycache__
+pm2*
+node_modules/
+/node_modules

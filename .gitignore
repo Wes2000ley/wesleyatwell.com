@@ -5,3 +5,4 @@ __pycache__
 pm2*
 node_modules/
 /node_modules
+node_modules

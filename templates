@@ -1,0 +1,216 @@
+/var/www/wesleyatwell.com/
+├── archive
+│   └── pokemon_data.txt
+├── error_log.txt
+├── FrogWeb
+│   ├── frog_decal_1.jpg
+│   ├── frog_decal_2.jpg
+│   ├── frog_decal_3.jpg
+│   ├── index.html
+│   ├── placeholder.jpg
+│   ├── script.js
+│   └── styles.css
+├── index.html
+├── OurSolarSystem
+│   ├── earth
+│   │   ├── earth1.jpg
+│   │   ├── earth2.jpg
+│   │   ├── earth3.jpg
+│   │   ├── earth4.jpg
+│   │   ├── earth5.jpg
+│   │   ├── earth6.jpg
+│   │   ├── earth7.jpg
+│   │   ├── earth8.jpg
+│   │   ├── earth9.jpg
+│   │   ├── earth.css
+│   │   ├── earth.html
+│   │   └── earth.js
+│   ├── images
+│   │   ├── earth.png
+│   │   ├── jupiter.png
+│   │   ├── mars.png
+│   │   ├── mercury.png
+│   │   ├── neptune.png
+│   │   ├── saturn.png
+│   │   ├── sun.png
+│   │   ├── uranus.png
+│   │   └── venus.png
+│   ├── index.html
+│   ├── jupiter
+│   │   ├── jupiter1.jpg
+│   │   ├── jupiter2.jpg
+│   │   ├── jupiter3.jpg
+│   │   ├── jupiter4.jpg
+│   │   ├── jupiter5.jpg
+│   │   ├── jupiter6.jpg
+│   │   ├── jupiter7.jpg
+│   │   ├── jupiter8.jpg
+│   │   ├── jupiter9.jpg
+│   │   ├── jupiter.css
+│   │   ├── jupiter.html
+│   │   └── jupiter.js
+│   ├── mars
+│   │   ├── mars1.jpg
+│   │   ├── mars2.jpg
+│   │   ├── mars3.jpg
+│   │   ├── mars4.jpg
+│   │   ├── mars5.jpg
+│   │   ├── mars6.jpg
+│   │   ├── mars7.jpg
+│   │   ├── mars8.jpg
+│   │   ├── mars9.jpg
+│   │   ├── mars.css
+│   │   ├── mars.html
+│   │   └── mars.js
+│   ├── mercury
+│   │   ├── mercury1.jpg
+│   │   ├── mercury2.jpg
+│   │   ├── mercury3.jpg
+│   │   ├── mercury4.jpg
+│   │   ├── mercury5.jpg
+│   │   ├── mercury6.jpg
+│   │   ├── mercury7.jpg
+│   │   ├── mercury8.jpg
+│   │   ├── mercury9.jpg
+│   │   ├── mercury.css
+│   │   ├── mercury.html
+│   │   └── mercury.js
+│   ├── neptune
+│   │   ├── neptune1.jpg
+│   │   ├── neptune2.jpg
+│   │   ├── neptune3.jpg
+│   │   ├── neptune4.jpg
+│   │   ├── neptune5.jpg
+│   │   ├── neptune6.jpg
+│   │   ├── neptune7.jpg
+│   │   ├── neptune8.jpg
+│   │   ├── neptune9.jpg
+│   │   ├── neptune.css
+│   │   ├── neptune.html
+│   │   └── neptune.js
+│   ├── saturn
+│   │   ├── saturn1.jpg
+│   │   ├── saturn2.jpg
+│   │   ├── saturn3.jpg
+│   │   ├── saturn4.jpg
+│   │   ├── saturn5.jpg
+│   │   ├── saturn6.jpg
+│   │   ├── saturn7.jpg
+│   │   ├── saturn8.jpg
+│   │   ├── saturn9.jpg
+│   │   ├── saturn.css
+│   │   ├── saturn.html
+│   │   └── saturn.js
+│   ├── script.js
+│   ├── styles.css
+│   ├── sun
+│   │   ├── sun1.jpg
+│   │   ├── sun2.jpg
+│   │   ├── sun3.jpg
+│   │   ├── sun4.jpg
+│   │   ├── sun5.jpg
+│   │   ├── sun6.jpg
+│   │   ├── sun7.jpg
+│   │   ├── sun8.jpg
+│   │   ├── sun9.jpg
+│   │   ├── sun.css
+│   │   ├── sun.html
+│   │   └── sun.js
+│   ├── uranus
+│   │   ├── uranus1.jpg
+│   │   ├── uranus2.jpg
+│   │   ├── uranus3.jpg
+│   │   ├── uranus4.jpg
+│   │   ├── uranus5.jpg
+│   │   ├── uranus6.gif
+│   │   ├── uranus7.jpg
+│   │   ├── uranus8.jpg
+│   │   ├── uranus9.jpg
+│   │   ├── uranus.css
+│   │   ├── uranus.html
+│   │   └── uranus.js
+│   └── venus
+│       ├── venus1.jpg
+│       ├── venus2.jpg
+│       ├── venus3.jpg
+│       ├── venus4.jpg
+│       ├── venus5.jpg
+│       ├── venus6.jpg
+│       ├── venus7.jpg
+│       ├── venus8.jpg
+│       ├── venus9.jpg
+│       ├── venus.css
+│       ├── venus.html
+│       └── venus.js
+├── package.json
+├── package-lock.json
+├── PlantSite
+│   ├── backup.js
+│   ├── backups
+│   │   ├── plants_backup_2024-12-23T04-22-21-668Z.json
+│   │   └── plants_backup_2024-12-23T05-11-03-661Z.json
+│   ├── deleteplants.js
+│   ├── exportPlantNames.js
+│   ├── fetchImages.js
+│   ├── frontend
+│   │   ├── index.html
+│   │   ├── plant.html
+│   │   ├── plant.js
+│   │   ├── script.js
+│   │   └── styles.css
+│   ├── listplants.js
+│   ├── models
+│   │   └── plant.js
+│   ├── package.json
+│   ├── plant_names.json
+│   ├── plant_scientific_names.json
+│   ├── plantscrape.py
+│   ├── plant_scraper.log
+│   ├── prompt.txt
+│   ├── rename_folders.py
+│   ├── rename_jpg.py
+│   ├── scrape_google_images.log
+│   ├── scraperfulldb.py
+│   ├── scraperonlynew.py
+│   ├── seed.js
+│   ├── server.js
+│   └── updateScientificNames.js
+├── pm2-plus-metrics-actions
+│   ├── custom-metrics.js
+│   ├── ecosystem.config.js
+│   ├── package.json
+│   └── README.md
+├── pokemon
+│   ├── app.js
+│   ├── archive data
+│   │   └── pokemon_data.txt
+│   ├── error.png
+│   ├── generate_pokemon_json.js
+│   ├── index.html
+│   ├── models
+│   │   └── Pokemon.js
+│   ├── node.js
+│   │   └── pokemon-api
+│   │       ├── package.json
+│   │       ├── package-lock.json
+│   │       └── server.js
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── pokeimg2.png
+│   ├── pokemon_data.txt
+│   ├── pokemonimg.png
+│   ├── populateMongoDB.js
+│   └── styles.css
+├── README.md
+├── sitemap.xml
+├── webappaws
+│   ├── ansible
+│   │   ├── playbook.yml
+│   │   └── templates
+│   │       ├── apache2.conf
+│   │       ├── ports.conf
+│   │       ├── service.j2
+│   │       └── wesleyatwell.com.conf.j2
+│   └── packer
+│       └── template.json
+└── wesstyles.css

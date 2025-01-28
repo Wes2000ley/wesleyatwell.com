@@ -1,0 +1,151 @@
+/* Reset default margin and padding */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0c0c0c; /* Dark background */
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: #84c0c9; /* Light blue link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #111; /* Dark header background */
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns with a ratio of 1:2 */
+    gap: 20px; /* Space between the sections */
+    max-width: 2000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    height: calc(100vh - 100px); /* Full viewport height minus header and footer */
+    overflow: hidden;
+}
+
+.facts-section {
+    background-color: #1f1f1f; /* Darker background for sections */
+    padding: 20px;
+    border-radius: 10px;
+    grid-column: 1; /* First column */
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+.facts-section h2 {
+    color: #84c0c9; /* Light blue heading color */
+    margin-bottom: 10px;
+}
+
+.facts-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.facts-list li {
+    margin-bottom: 10px;
+}
+
+.images-section {
+    padding: 20px;
+    background-color: #1f1f1f; /* Darker background for sections */
+    border-radius: 10px;
+    grid-column: 2; /* Second column */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.images-section h2 {
+    color: #84c0c9; /* Light blue heading color */
+    position: absolute;
+    top: 10px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-width: 700px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.main-image img.loaded {
+    opacity: 1;
+}
+
+.preview-image img {
+    width: 100px;
+    height: auto;
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: opacity 0.3s;
+}
+
+.preview-image img:hover {
+    opacity: 0.8;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #336699;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.back-button:hover {
+    background-color: #225577;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #111; /* Dark footer background */
+    margin-top: 20px;
+    border-radius: 10px;
+    width: calc(100% - 40px); /* Full width minus padding */
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        grid-template-rows: auto auto; /* Two rows */
+        gap: 10px;
+    }
+
+    .facts-section, .images-section {
+        grid-column: 1; /* Span the single column */
+        grid-row: auto; /* Auto rows */
+    }
+}

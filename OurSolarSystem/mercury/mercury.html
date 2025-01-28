@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Mercury Facts and Images</title>
+    <link rel="stylesheet" href="mercury.css">
+</head>
+<body>
+    <header>
+        <h1>Planet Mercury Facts and Images</h1>
+    </header>
+    <a class="back-button" href="../index.html">Back to Our Solar System</a>
+    <main>
+        <section class="facts-section">
+            <h2>Mercury Facts</h2>
+            <ul class="facts-list">
+                <li>Mercury is the smallest and innermost planet in the Solar System.</li>
+                <li>It is named after the Roman god of commerce, travel, and thievery.</li>
+                <li>Mercury has a diameter of about 4,880 kilometers (3,032 miles), making it slightly larger than the Moon.</li>
+                <li>It has no atmosphere to retain heat and has surface temperatures that vary from -173°C (-279°F) at night to 427°C (800°F) during the day.</li>
+                <li>Mercury has a large iron core, accounting for about 65% of its mass.</li>
+                <li>It has a very thin exosphere primarily composed of oxygen, sodium, hydrogen, helium, and potassium.</li>
+                <li>A day on Mercury (one rotation) takes about 59 Earth days, while its year (orbit around the Sun) is about 88 Earth days.</li>
+                <li>Mercury's surface is covered with craters, plains, and ridges, resembling the Moon's surface.</li>
+                <li>The planet has no moons or rings.</li>
+                <li>Mercury has been visited by only two spacecraft: Mariner 10 in 1974-75 and MESSENGER, which orbited the planet from 2011 to 2015.</li>
+                <li>It is one of the five planets visible to the naked eye from Earth and appears as a bright star-like object in the sky.</li>
+                <li>Mercury's orbit is highly elliptical, with the closest approach to the Sun (perihelion) being about 46 million kilometers (29 million miles), and the farthest (aphelion) about 70 million kilometers (43 million miles).</li>
+                <li>Due to its proximity to the Sun, Mercury is challenging to observe from Earth except during twilight.</li>
+                <li>Future missions may explore Mercury further to study its composition, geology, and magnetic field.</li>
+                <li>Mercury's surface features include scarps (cliffs), craters named after artists, writers, and musicians, and extensive plains.</li>
+                <li>It has a gravitational pull about 38% of Earth's gravity, making it difficult for spacecraft to orbit and land on its surface.</li>
+                <li>Mercury experiences a phenomenon known as "resonant rotation," where its rotation and orbital periods are in a 3:2 ratio.</li>
+                <li>Studies suggest that water ice may exist in permanently shadowed craters near Mercury's poles.</li>
+                <li>Mercury's orbit is the most eccentric of all the planets in the Solar System.</li>
+                <li>The planet's surface is heavily cratered and has undergone extensive volcanism in the past.</li>
+            </ul>
+        </section>
+        <section class="images-section">
+            <h2>Mercury Images</h2>
+            <div class="carousel">
+                <div class="preview-image" id="prev-image" onclick="showPreviousImage()">
+                    <!-- Previous image preview -->
+                </div>
+                <div class="main-image" id="main-image">
+                    <!-- Main image -->
+                </div>
+                <div class="preview-image" id="next-image" onclick="showNextImage()">
+                    <!-- Next image preview -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://solarsystem.nasa.gov/planets/mercury/overview/" target="_blank">More on NASA's Mercury Page</a> |
+        <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" target="_blank">Mercury on Wikipedia</a>
+    </footer>
+    <script src="mercury.js"></script>
+    <script>
+        function goToIndexPage() {
+            window.location.href = '../index.html'; // Adjust path as necessary
+        }
+    </script>
+</body>
+</html>

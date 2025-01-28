@@ -1,0 +1,18 @@
+"Provide detailed information for 30 unique plants. For each plant, adhere strictly to the following template without adding extra commentary:
+
+{
+        "name": "African Milk Bush",
+        "sunlight": "Bright direct light",
+        "watering": "Allow soil to dry completely between waterings",
+        "temperature": "65°F - 85°F",
+        "description": "A tall, branching succulent with unique green and white variegation."
+    },
+    {
+        "name": "String of Turtles",
+        "sunlight": "Bright indirect light",
+        "watering": "Allow soil to dry slightly between waterings",
+        "temperature": "65°F - 80°F",
+        "description": "A delicate trailing plant with round, turtle-shell-patterned leaves."
+    },
+
+Ensure that each entry includes the plant's name, a concise description, its sunlight needs, watering requirements, and the appropriate temperature range. The information should be clear, accurate, and follow the template precisely." Please look in the chat for previous plants given and do not give those plants. !!!!Make sure you are givving the plants common name!!!!

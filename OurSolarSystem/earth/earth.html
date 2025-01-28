@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Earth Facts and Images</title>
+    <link rel="stylesheet" href="earth.css">
+</head>
+<body>
+    <header>
+        <h1>Earth Facts and Images</h1>
+    </header>
+    <a class="back-button" href="../index.html">Back to Our Solar System</a>
+    <main>
+        <section class="facts-section">
+            <h2>Earth Facts</h2>
+            <ul class="facts-list">
+                <li>Earth is the third planet from the Sun and the only known planet to support life.</li>
+                <li>It has a diameter of about 12,742 km (7,918 miles).</li>
+                <li>About 71% of Earth's surface is covered with water, and the remaining 29% is land.</li>
+                <li>Earth has one moon, known simply as "the Moon."</li>
+                <li>It takes Earth 24 hours to complete one rotation, which defines a day.</li>
+                <li>It takes Earth about 365.25 days to orbit the Sun, which defines a year.</li>
+                <li>Earth's atmosphere is composed mainly of nitrogen (78%) and oxygen (21%).</li>
+                <li>Earth's surface is divided into several tectonic plates that move over time.</li>
+                <li>The planet has a diverse range of climates, from tropical to polar regions.</li>
+                <li>Earth has a magnetic field that protects it from solar radiation.</li>
+                <li>Earth’s atmosphere allows it to maintain temperatures that can support liquid water.</li>
+                <li>Earth has seasons due to the tilt of its axis relative to its orbital plane.</li>
+                <li>Earth's biosphere has significantly altered the atmosphere and other abiotic conditions.</li>
+                <li>The planet has more than 8 million species of plants and animals.</li>
+                <li>Earth's surface is mostly covered by oceans, which play a key role in regulating its climate.</li>
+                <li>The tallest mountain on Earth is Mount Everest, reaching a height of 8,848 meters (29,029 feet).</li>
+                <li>The deepest oceanic trench is the Mariana Trench, which reaches a depth of about 11 kilometers (7 miles).</li>
+                <li>Earth's internal structure is divided into a solid inner core, a liquid outer core, a mantle, and a crust.</li>
+                <li>Earth's climate has changed significantly over geological time, influencing the evolution of life.</li>
+                <li>Human activity has a significant impact on Earth's ecosystems and climate.</li>
+            </ul>
+        </section>
+        <section class="images-section">
+            <h2>Earth Images</h2>
+            <div class="carousel">
+                <div class="preview-image" id="prev-image" onclick="showPreviousImage()">
+                    <!-- Previous image preview -->
+                </div>
+                <div class="main-image" id="main-image">
+                    <!-- Main image -->
+                </div>
+                <div class="preview-image" id="next-image" onclick="showNextImage()">
+                    <!-- Next image preview -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://science.nasa.gov/earth" target="_blank">More on NASA's Earth Page</a> |
+        <a href="https://en.wikipedia.org/wiki/Earth" target="_blank">Earth on Wikipedia</a>
+    </footer>
+    <script src="earth.js"></script>
+    <script>
+        function goToIndexPage() {
+            window.location.href = '../index.html'; // Replace with your index.html path if necessary
+        }
+    </script>
+</body>
+</html>

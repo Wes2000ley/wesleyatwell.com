@@ -1,0 +1,10 @@
+node_modules/
+
+.env
+
+gptj_env
+
+.gptj_env
+gpt-neo-cpu-env
+_pycache_
+__pycache__

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="https://wesleyatwell.com" style="    padding: 10px;
+    left: 3%;
+    top: 3%;
+    position: absolute;
+    /* background: linear-gradient(to right, red, orangered, orange, blue, blueviolet, yellow, greenyellow, green); */
+    text-align: center;
+    font-size: 20px;
+    /* bottom: 800px; */
+    /* position: relative; */
+    /* font-family: cursive; */
+    z-index: 10000;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;">Home</a>
+    <div class="container">
+        <div class="solar-system">
+            <!-- Sun -->
+             <div class="sunshine">
+            <a href="sun/sun.html" class="sun" data-title="Sun" data-axial-rotation-speed=".04">
+                <img src="images/sun.png" alt="Sun Image" class="isun" />
+                <div class="tooltip">
+                    <img src="" alt="Image" />
+                    <p>Sun</p>
+                    <span>Loading...</span>
+                </div>
+            </a>
+        </div>
+            <!-- Mercury -->
+            <div class="orbit mercury-orbit" data-rotation-speed="5" data-initial-rotation="4351.23" >
+                <a href="mercury\mercury.html" class="planet mercury" data-title="Mercury_(planet)" data-axial-rotation-speed=".02">
+                    <img src="images/mercury.png" alt="Mercury Image" class="iplanet imercury" />
+                    <div class="tooltip">
+                        <img src="" alt="Image" />
+                        <p>Mercury</p>
+                        <span>Loading...</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Venus -->
+            <div class="orbit venus-orbit" data-rotation-speed="3.8" data-initial-rotation="3390.53">
+                <a href="venus/venus.html" class="planet venus" data-title="Venus" data-axial-rotation-speed="-.004">
+                    <img src="images/venus.png" alt="Venus Image" class="iplanet ivenus" />
+                    <div class="tooltip">
+                        <img src="" alt="Image" />
+                        <p>Venus</p>
+                        <span>Loading...</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Earth -->
+            <div class="orbit earth-orbit" data-rotation-speed="3.21" data-initial-rotation="3122.16">
+                <a href="earth/earth.html" class="planet earth" data-title="Earth" data-axial-rotation-speed="1">
+                    <img src="images/earth.png" alt="Earth Image" class="iplanet iearth" />
+                    <div class="tooltip">
+                        <img src="" alt="Image" />
+                        <p>Earth</p>
+                        <span>Loading...</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Mars -->
+            <div class="orbit mars-orbit" data-rotation-speed="2.36" data-initial-rotation="2173.12">
+                <a href="mars/mars.html" class="planet mars" data-title="Mars" data-axial-rotation-speed=".95">
+                    <img src="images/mars.png" alt="Mars Image" class="iplanet imars" />
+                    <div class="tooltip">
+                        <img src="" alt="Image" />
+                        <p>Mars</p>
+                        <span>Loading...</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Jupiter -->
+            <div class="orbit jupiter-orbit" data-rotation-speed="1.26" data-initial-rotation="337.287">
+                <a href="jupiter/jupiter.html" class="planet jupiter" data-title="Jupiter" data-axial-rotation-speed="2.4">
+                    <img src="images/jupiter.png" alt="JupiterImage" class="iplanet ijupiter" />
+                    <div class="tooltip">
+                        <img src="" alt="Image" />
+                        <p>Jupiter</p>
+                        <span>Loading...</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Saturn -->
+            <div class="orbit saturn-orbit" data-rotation-speed=".88" data-initial-rotation="40.0293">
+                <a href="saturn/saturn.html" class="planet saturn" data-title="Saturn" data-axial-rotation-speed="2.2">
+                    <img src="images/saturn.png" alt="Saturn Image" class="iplanet isaturn" />
+                    <div class="ring"></div>
+                    <div class="tooltip">
+                        <img src="" alt="Image" />
+                        <p>Saturn</p>
+                        <span>Loading...</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Uranus -->
+            <div class="orbit uranus-orbit" data-rotation-speed=".6" data-initial-rotation="151.1">
+                <a href="uranus/uranus.html" class="planet uranus" data-title="Uranus" data-axial-rotation-speed="1.4">
+                    <img src="images/uranus.png" alt="Uranus Image" class="iplanet iuranus" />
+                    <div class="tooltip">
+                        <img src="" alt="Image" />
+                        <p>Uranus</p>
+                        <span>Loading...</span>
+                    </div>
+                </a>
+            </div>
+            <!-- Neptune -->
+            <div class="orbit neptune-orbit" data-rotation-speed=".25" data-initial-rotation="300.326">
+                <a href="neptune/neptune.html" class="planet neptune" data-title="Neptune" data-axial-rotation-speed="1.5">
+                    <img src="images/neptune.png" alt="Neptune Image" class="iplanet ineptune" />
+                    <div class="tooltip">
+                        <img src="" alt="Image" />
+                        <p>Neptune</p>
+                        <span>Loading...</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Welcome to our Solar System</h1>
+        <p>Please click on a celestial body to learn about it.</p>
+    </div>
+    <div id="fixed-tooltip" class="fixed-tooltip">
+        <img src="" alt="Image" />
+        <p id="tooltip-title">Title</p>
+        <span id="tooltip-summary">Summary</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

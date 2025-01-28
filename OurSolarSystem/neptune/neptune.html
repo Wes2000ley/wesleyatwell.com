@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Neptune Facts and Images</title>
+    <link rel="stylesheet" href="neptune.css">
+</head>
+<body>
+    <header>
+        <h1>Neptune Facts and Images</h1>
+    </header>
+    <a class="back-button" href="../index.html">Back to Our Solar System</a>
+    <main>
+        <section class="facts-section">
+            <h2>Neptune Facts</h2>
+            <ul class="facts-list">
+                <li>Neptune is the eighth and farthest planet from the Sun in the Solar System.</li>
+                <li>It is classified as an ice giant, composed mainly of hydrogen, helium, and ices like water, ammonia, and methane.</li>
+                <li>Neptune has a diameter of about 49,244 km (30,598 miles), making it the fourth-largest planet by diameter and third-largest by mass.</li>
+                <li>Its atmosphere is primarily hydrogen and helium with trace amounts of methane, which gives it a blue color.</li>
+                <li>Neptune has a system of faint rings and 14 known moons, the largest of which are Triton, Nereid, Naiad, Thalassa, and Despina.</li>
+                <li>It has the strongest sustained winds of any planet in the Solar System, with wind speeds reaching up to 2,100 km/h (1,300 mph).</li>
+                <li>Neptune has a tilted magnetic field, with its magnetic poles offset from its rotational axis by 47 degrees.</li>
+                <li>The planet's atmosphere exhibits dynamic weather patterns, including large storms and high-speed jet streams.</li>
+                <li>It was discovered in 1846 by Johann Galle and Urbain Le Verrier through mathematical predictions based on irregularities in Uranus' orbit.</li>
+                <li>Neptune has a thick atmosphere that consists mainly of hydrogen, helium, and methane gas.</li>
+                <li>It orbits the Sun once every 164.8 Earth years at an average distance of about 4.5 billion kilometers (30.1 AU).</li>
+                <li>Neptune's temperature can drop to -218°C (-360°F), making it one of the coldest places in the Solar System.</li>
+                <li>NASA's Voyager 2 is the only spacecraft to have visited Neptune, passing by the planet in 1989 and providing detailed images and data.</li>
+                <li>Neptune's blue color comes from methane in its atmosphere absorbing red light and reflecting blue.</li>
+                <li>Scientists believe Neptune has a rocky core surrounded by a deep layer of ice and a thick atmosphere of gases.</li>
+                <li>Future missions may explore Neptune further to study its moons, rings, and complex weather systems.</li>
+                <li>Neptune is not visible to the naked eye and requires a telescope to observe.</li>
+                <li>Its moon Triton has geysers that eject nitrogen gas and dust particles into space.</li>
+            </ul>
+        </section>
+        <section class="images-section">
+            <h2>Neptune Images</h2>
+            <div class="carousel">
+                <div class="preview-image" id="prev-image" onclick="showPreviousImage()">
+                    <!-- Previous image preview -->
+                </div>
+                <div class="main-image" id="main-image">
+                    <!-- Main image -->
+                </div>
+                <div class="preview-image" id="next-image" onclick="showNextImage()">
+                    <!-- Next image preview -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://solarsystem.nasa.gov/planets/neptune/overview/" target="_blank">More on NASA's Neptune Page</a> |
+        <a href="https://en.wikipedia.org/wiki/Neptune" target="_blank">Neptune on Wikipedia</a>
+    </footer>
+    <script src="neptune.js"></script>
+    <script>
+        function goToIndexPage() {
+            window.location.href = '../index.html'; // Adjust path as necessary
+        }
+    </script>
+</body>
+</html>

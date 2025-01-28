@@ -1,0 +1,106 @@
+/* Reset some default browser styles */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed from 90vh to ensure full viewport height */
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    padding: 20px; /* Added padding for smaller screens */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Limit the maximum width for larger screens */
+}
+
+.square-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%; /* Use percentage for responsiveness */
+    padding: 45%; /* Maintain square aspect ratio */
+    position: relative; /* For absolute positioning of content */
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border: 2px solid #333;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.square-link::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.square-link.Solar {
+    background-color: blueviolet;
+}
+
+.square-link.Frog {
+    background-color: green;
+}
+
+.square-link.pokemon {
+    background-color: red;
+}
+
+.square-link.plants {
+    background-color: rgb(46, 79, 224);
+}
+
+.square-link:hover {
+    background-color: #333;
+    color: #00ccff;
+    border-color: #00ccff;
+    transform: scale(1.05); /* Slightly reduced scale for better mobile experience */
+}
+
+.square-link:active {
+    transform: scale(1);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and larger devices */
+@media (min-width: 600px) {
+    .square-link {
+        width: 30%;
+        padding: 30%; /* Maintain square aspect ratio */
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktops and larger devices */
+@media (min-width: 1024px) {
+    .square-link {
+        width: 22%;
+        padding: 22%; /* Maintain square aspect ratio */
+        font-size: 1.8rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 599px) {
+    .square-link {
+        width: 100%;
+        padding: 100%; /* Full width to maintain square */
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://www.wesleyatwell.com/Plants/plant.html">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Buttons and Search -->
+        <div class="navigation">
+            <button id="back-button" aria-label="Back to Plant List">← Back to Plant List</button>
+            <div class="plant-navigation">
+                <button id="prev-plant" aria-label="Previous Plant">← Previous Plant</button>
+                <button id="next-plant" aria-label="Next Plant">Next Plant →</button>
+            </div>
+            <!-- Search Input -->
+            <input type="text" id="search-input" placeholder="Search plants..." aria-label="Search plants" />
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="hidden">
+            <p>Failed to load plant details. Please try again later.</p>
+        </div>
+
+        <!-- Plant Details -->
+        <div id="plant-details" class="text-left hidden">
+            <h1 id="plant-name">Plant Name</h1>
+
+            <!-- Image Gallery -->
+            <div id="plant-images" class="image-gallery">
+                <!-- Multiple images will be inserted here -->
+            </div>
+
+            <p><strong>Sunlight:</strong> <span id="plant-sunlight"></span></p>
+            <p><strong>Watering:</strong> <span id="plant-watering"></span></p>
+            <p><strong>Temperature:</strong> <span id="plant-temperature"></span></p>
+            <p><strong>Description:</strong> <span id="plant-description"></span></p>
+        </div>
+    </div>
+
+    <script src="plant.js"></script>
+</body>
+</html>

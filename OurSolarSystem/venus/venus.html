@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Venus Facts and Images</title>
+    <link rel="stylesheet" href="venus.css">
+</head>
+<body>
+    <header>
+        <h1>Venus Facts and Images</h1>
+    </header>
+    <a class="back-button" href="../index.html">Back to Our Solar System</a>
+    <main>
+        <section class="facts-section">
+            <h2>Venus Facts</h2>
+            <ul class="facts-list">
+                <li>Venus is the second planet from the Sun and is Earth's closest planetary neighbor.</li>
+                <li>It's one of the four terrestrial planets, meaning it's a rocky body like Earth.</li>
+                <li>Venus has a thick atmosphere composed mainly of carbon dioxide, with clouds of sulfuric acid.</li>
+                <li>Venus's surface temperatures are extremely high, around 465°C (870°F), making it the hottest planet in our Solar System.</li>
+                <li>A day on Venus (one rotation) lasts 243 Earth days, and a year (one orbit around the Sun) takes about 225 Earth days.</li>
+                <li>Venus rotates in the opposite direction to most planets, meaning the Sun rises in the west and sets in the east.</li>
+                <li>The atmospheric pressure on Venus's surface is about 92 times that of Earth.</li>
+                <li>Venus does not have any moons or rings.</li>
+                <li>The planet is named after Venus, the Roman goddess of love and beauty.</li>
+                <li>Venus has a diameter of about 12,104 km (7,521 miles), making it nearly the same size as Earth.</li>
+                <li>Venus’s surface is covered with volcanic plains, mountains, and extensive lava flows.</li>
+                <li>Due to its thick atmosphere, the planet has a strong greenhouse effect that traps heat.</li>
+                <li>Venus has retrograde rotation, which means it rotates backward compared to other planets.</li>
+                <li>Venus’s surface is obscured by thick clouds, making it impossible to observe its surface without radar mapping.</li>
+                <li>The planet has more volcanoes than any other planet in our Solar System.</li>
+                <li>Some areas on Venus may have volcanic activity still occurring today.</li>
+                <li>Despite being similar in size to Earth, Venus's surface is very different, with highlands, lowland plains, and large volcanoes.</li>
+                <li>Radar mapping has revealed that Venus's surface is relatively young, estimated to be about 300-500 million years old.</li>
+                <li>Venus's clouds reflect sunlight, making it one of the brightest objects in our sky.</li>
+                <li>The atmospheric composition and surface conditions make it impossible for life as we know it to exist on Venus.</li>
+            </ul>
+        </section>
+        <section class="images-section">
+            <h2>Venus Images</h2>
+            <div class="carousel">
+                <div class="preview-image" id="prev-image" onclick="showPreviousImage()">
+                    <!-- Previous image preview -->
+                </div>
+                <div class="main-image" id="main-image">
+                    <!-- Main image -->
+                </div>
+                <div class="preview-image" id="next-image" onclick="showNextImage()">
+                    <!-- Next image preview -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://science.nasa.gov/venus" target="_blank">More on NASA's Venus Page</a> |
+        <a href="https://en.wikipedia.org/wiki/Venus" target="_blank">Venus on Wikipedia</a>
+    </footer>
+    <script src="venus.js"></script>
+    <script>
+        function goToIndexPage() {
+            window.location.href = '../index.html'; // Replace with your index.html path if necessary
+        }
+    </script>
+</body>
+</html>

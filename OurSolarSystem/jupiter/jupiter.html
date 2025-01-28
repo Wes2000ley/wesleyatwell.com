@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Jupiter Facts and Images</title>
+    <link rel="stylesheet" href="jupiter.css">
+</head>
+<body>
+    <header>
+        <h1>Jupiter Facts and Images</h1>
+    </header>
+    <a class="back-button" href="../index.html">Back to Our Solar System</a>
+    <main>
+        <section class="facts-section">
+            <h2>Jupiter Facts</h2>
+            <ul class="facts-list">
+                <li>Jupiter is the fifth planet from the Sun and the largest in the Solar System.</li>
+                <li>It has a diameter of about 139,820 km (86,881 miles), making it more than 11 times wider than Earth.</li>
+                <li>Jupiter is primarily composed of hydrogen and helium, similar to the Sun.</li>
+                <li>It has a strong magnetic field, with a magnetosphere extending millions of kilometers into space.</li>
+                <li>Jupiter has a fast rotation, completing a day in about 9.9 hours.</li>
+                <li>Its iconic Great Red Spot is a massive storm larger than Earth, lasting for centuries.</li>
+                <li>Jupiter has at least 79 known moons, including the four large Galilean moons: Io, Europa, Ganymede, and Callisto.</li>
+                <li>It has faint rings composed of dust particles.</li>
+                <li>Jupiter has been visited by spacecraft such as Voyager 1 and 2, Galileo, Juno, and the upcoming Europa Clipper mission.</li>
+                <li>The planet's atmosphere features bands of clouds, with the upper atmosphere marked by colorful zones and belts.</li>
+                <li>Jupiter experiences intense radiation and powerful storms, including lightning and auroras near its poles.</li>
+                <li>It plays a critical role in shaping the Solar System's dynamics, influencing the orbits of other planets and asteroids.</li>
+                <li>Jupiter's mass is more than 300 times that of Earth, dominating the gravitational balance in the outer Solar System.</li>
+                <li>The planet's immense gravity acts as a shield, deflecting many comets and asteroids away from inner planets like Earth.</li>
+                <li>Future missions aim to explore Jupiter's moons for signs of habitability and understand its complex magnetic environment.</li>
+            </ul>
+        </section>
+        <section class="images-section">
+            <h2>Jupiter Images</h2>
+            <div class="carousel">
+                <div class="preview-image" id="prev-image" onclick="showPreviousImage()">
+                    <!-- Previous image preview -->
+                </div>
+                <div class="main-image" id="main-image">
+                    <!-- Main image -->
+                </div>
+                <div class="preview-image" id="next-image" onclick="showNextImage()">
+                    <!-- Next image preview -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank">More on NASA's Jupiter Page</a> |
+        <a href="https://en.wikipedia.org/wiki/Jupiter" target="_blank">Jupiter on Wikipedia</a>
+    </footer>
+    <script src="jupiter.js"></script>
+    <script>
+        function goToIndexPage() {
+            window.location.href = '../index.html'; // Adjust path as necessary
+        }
+    </script>
+</body>
+</html>

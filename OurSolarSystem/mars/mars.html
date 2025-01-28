@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Mars Facts and Images</title>
+    <link rel="stylesheet" href="mars.css">
+</head>
+<body>
+    <header>
+        <h1>Mars Facts and Images</h1>
+    </header>
+    <a class="back-button" href="../index.html">Back to Our Solar System</a>
+    <main>
+        <section class="facts-section">
+            <h2>Mars Facts</h2>
+            <ul class="facts-list">
+                <li>Mars is the fourth planet from the Sun and is often referred to as the "Red Planet" due to its reddish appearance.</li>
+                <li>It has a diameter of about 6,779 km (4,212 miles).</li>
+                <li>Mars has two small moons named Phobos and Deimos.</li>
+                <li>The planet's thin atmosphere is primarily composed of carbon dioxide (95%), with traces of nitrogen and argon.</li>
+                <li>Mars experiences seasons similar to Earth due to the tilt of its rotational axis.</li>
+                <li>A day on Mars, known as a "sol," is slightly longer than a day on Earth, lasting about 24.6 hours.</li>
+                <li>It takes Mars about 687 Earth days to complete one orbit around the Sun.</li>
+                <li>Mars is home to the tallest volcano in the solar system, Olympus Mons, which stands about 22 km (13.6 miles) high.</li>
+                <li>The planet's surface is marked by vast canyons, including Valles Marineris, one of the largest canyon systems in the solar system.</li>
+                <li>Mars has evidence of past water flows in the form of dry riverbeds and minerals that form in water.</li>
+                <li>The planet has a cold desert climate, with surface temperatures ranging from -125°C (-195°F) to 20°C (68°F).</li>
+                <li>Mars has dust storms that can engulf the entire planet, lasting for weeks or months.</li>
+                <li>The thin atmosphere and lack of a global magnetic field make Mars' surface vulnerable to cosmic and solar radiation.</li>
+                <li>Mars has polar ice caps made of water ice and dry ice (frozen carbon dioxide).</li>
+                <li>NASA has sent several missions to Mars, including rovers like Curiosity, Perseverance, and orbiters like MAVEN.</li>
+                <li>The planet's reddish appearance is due to iron oxide, commonly known as rust, on its surface.</li>
+                <li>Mars has been a subject of human interest for potential future colonization due to its similarities to Earth.</li>
+                <li>The first successful flyby of Mars was by NASA's Mariner 4 in 1965.</li>
+                <li>Mars has seasons, polar ice caps, and weather patterns similar to Earth but on a much smaller scale.</li>
+                <li>The Martian sky often appears pink or orange due to fine dust particles in the atmosphere.</li>
+            </ul>
+        </section>
+        <section class="images-section">
+            <h2>Mars Images</h2>
+            <div class="carousel">
+                <div class="preview-image" id="prev-image" onclick="showPreviousImage()">
+                    <!-- Previous image preview -->
+                </div>
+                <div class="main-image" id="main-image">
+                    <!-- Main image -->
+                </div>
+                <div class="preview-image" id="next-image" onclick="showNextImage()">
+                    <!-- Next image preview -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://science.nasa.gov/mars" target="_blank">More on NASA's Mars Page</a> |
+        <a href="https://en.wikipedia.org/wiki/Mars" target="_blank">Mars on Wikipedia</a>
+    </footer>
+    <script src="mars.js"></script>
+    <script>
+        function goToIndexPage() {
+            window.location.href = '../index.html'; // Replace with your index.html path if necessary
+        }
+    </script>
+</body>
+</html>

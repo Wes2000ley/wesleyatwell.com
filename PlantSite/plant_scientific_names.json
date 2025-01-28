@@ -1,0 +1,555 @@
+[
+    {
+      "commonName": "Silver Satin Pothos",
+      "scientificName": "Epipremnum aureum 'Silver Satin'"
+    },
+    {
+      "commonName": "Swiss Cheese Plant",
+      "scientificName": "Monstera adansonii"
+    },
+    {
+      "commonName": "Arrowhead Plant",
+      "scientificName": "Syngonium podophyllum"
+    },
+    {
+      "commonName": "Snake Plant",
+      "scientificName": "Sansevieria trifasciata (now Dracaena trifasciata)"
+    },
+    {
+      "commonName": "Spider Plant",
+      "scientificName": "Chlorophytum comosum"
+    },
+    {
+      "commonName": "Peace Lily",
+      "scientificName": "Spathiphyllum wallisii"
+    },
+    {
+      "commonName": "Fiddle Leaf Fig",
+      "scientificName": "Ficus lyrata"
+    },
+    {
+      "commonName": "Monstera Deliciosa",
+      "scientificName": "Monstera deliciosa"
+    },
+    {
+      "commonName": "Aloe Vera",
+      "scientificName": "Aloe barbadensis miller"
+    },
+    {
+      "commonName": "Boston Fern",
+      "scientificName": "Nephrolepis exaltata"
+    },
+    {
+      "commonName": "Jade Plant",
+      "scientificName": "Crassula ovata"
+    },
+    {
+      "commonName": "Cactus",
+      "scientificName": "Various species in the family Cactaceae"
+    },
+    {
+      "commonName": "Pothos",
+      "scientificName": "Epipremnum aureum"
+    },
+    {
+      "commonName": "Rubber Plant",
+      "scientificName": "Ficus elastica"
+    },
+    {
+      "commonName": "Chinese Money Plant",
+      "scientificName": "Pilea peperomioides"
+    },
+    {
+      "commonName": "ZZ Plant",
+      "scientificName": "Zamioculcas zamiifolia"
+    },
+    {
+      "commonName": "Bird of Paradise",
+      "scientificName": "Strelitzia reginae"
+    },
+    {
+      "commonName": "Areca Palm",
+      "scientificName": "Dypsis lutescens"
+    },
+    {
+      "commonName": "English Ivy",
+      "scientificName": "Hedera helix"
+    },
+    {
+      "commonName": "Philodendron",
+      "scientificName": "Philodendron hederaceum (various species)"
+    },
+    {
+      "commonName": "Calathea",
+      "scientificName": "Calathea spp."
+    },
+    {
+      "commonName": "Dracaena",
+      "scientificName": "Dracaena spp."
+    },
+    {
+      "commonName": "Parlor Palm",
+      "scientificName": "Chamaedorea elegans"
+    },
+    {
+      "commonName": "Golden Pothos",
+      "scientificName": "Epipremnum aureum 'Golden'"
+    },
+    {
+      "commonName": "Aglaonema",
+      "scientificName": "Aglaonema commutatum"
+    },
+    {
+      "commonName": "Dieffenbachia",
+      "scientificName": "Dieffenbachia seguine"
+    },
+    {
+      "commonName": "Oxalis",
+      "scientificName": "Oxalis triangularis"
+    },
+    {
+      "commonName": "Prayer Plant",
+      "scientificName": "Maranta leuconeura"
+    },
+    {
+      "commonName": "Alocasia",
+      "scientificName": "Alocasia spp."
+    },
+    {
+      "commonName": "Anthurium",
+      "scientificName": "Anthurium andraeanum"
+    },
+    {
+      "commonName": "Peperomia",
+      "scientificName": "Peperomia spp."
+    },
+    {
+      "commonName": "Cast Iron Plant",
+      "scientificName": "Aspidistra elatior"
+    },
+    {
+      "commonName": "Kentia Palm",
+      "scientificName": "Howea forsteriana"
+    },
+    {
+      "commonName": "Croton",
+      "scientificName": "Codiaeum variegatum"
+    },
+    {
+      "commonName": "Norfolk Island Pine",
+      "scientificName": "Araucaria heterophylla"
+    },
+    {
+      "commonName": "Rubber Tree",
+      "scientificName": "Ficus elastica"
+    },
+    {
+      "commonName": "String of Hearts",
+      "scientificName": "Ceropegia woodii"
+    },
+    {
+      "commonName": "Bird's Nest Fern",
+      "scientificName": "Asplenium nidus"
+    },
+    {
+      "commonName": "Ponytail Palm",
+      "scientificName": "Beaucarnea recurvata"
+    },
+    {
+      "commonName": "String of Pearls",
+      "scientificName": "Senecio rowleyanus"
+    },
+    {
+      "commonName": "Hoya Carnosa",
+      "scientificName": "Hoya carnosa"
+    },
+    {
+      "commonName": "Calathea Ornata",
+      "scientificName": "Calathea ornata"
+    },
+    {
+      "commonName": "Zebra Plant",
+      "scientificName": "Aphelandra squarrosa"
+    },
+    {
+      "commonName": "Croton Petra",
+      "scientificName": "Codiaeum variegatum 'Petra'"
+    },
+    {
+      "commonName": "Blue Star Fern",
+      "scientificName": "Phlebodium aureum"
+    },
+    {
+      "commonName": "Agave Attenuata",
+      "scientificName": "Agave attenuata"
+    },
+    {
+      "commonName": "Dracaena Marginata",
+      "scientificName": "Dracaena marginata"
+    },
+    {
+      "commonName": "Lipstick Plant",
+      "scientificName": "Aeschynanthus radicans"
+    },
+    {
+      "commonName": "Dumb Cane",
+      "scientificName": "Dieffenbachia seguine"
+    },
+    {
+      "commonName": "Fatsia Japonica",
+      "scientificName": "Fatsia japonica"
+    },
+    {
+      "commonName": "Maidenhair Fern",
+      "scientificName": "Adiantum spp."
+    },
+    {
+      "commonName": "Chinese Evergreen",
+      "scientificName": "Aglaonema commutatum"
+    },
+    {
+      "commonName": "Pilea Peperomioides",
+      "scientificName": "Pilea peperomioides"
+    },
+    {
+      "commonName": "Sago Palm",
+      "scientificName": "Cycas revoluta"
+    },
+    {
+      "commonName": "Trailing Jade",
+      "scientificName": "Senecio mikanioides (String of Bananas)"
+    },
+    {
+      "commonName": "Red Aglaonema",
+      "scientificName": "Aglaonema commutatum 'Red'"
+    },
+    {
+      "commonName": "Jasmine Sambac",
+      "scientificName": "Jasminum sambac"
+    },
+    {
+      "commonName": "Schefflera Arboricola",
+      "scientificName": "Schefflera arboricola"
+    },
+    {
+      "commonName": "Haworthia",
+      "scientificName": "Haworthia spp."
+    },
+    {
+      "commonName": "African Violet",
+      "scientificName": "Saintpaulia ionantha"
+    },
+    {
+      "commonName": "Corn Plant",
+      "scientificName": "Dracaena fragrans 'Massangeana'"
+    },
+    {
+      "commonName": "Baby Rubber Plant",
+      "scientificName": "Ficus elastica 'Baby Rubber'"
+    },
+    {
+      "commonName": "Asparagus Fern",
+      "scientificName": "Asparagus setaceus"
+    },
+    {
+      "commonName": "Wax Begonia",
+      "scientificName": "Begonia semperflorens"
+    },
+    {
+      "commonName": "Purple Shamrock",
+      "scientificName": "Oxalis triangularis"
+    },
+    {
+      "commonName": "Golden Barrel Cactus",
+      "scientificName": "Echinocactus grusonii"
+    },
+    {
+      "commonName": "Velvet Calathea",
+      "scientificName": "Calathea spp. 'Velvet'"
+    },
+    {
+      "commonName": "Marble Queen Pothos",
+      "scientificName": "Epipremnum aureum 'Marble Queen'"
+    },
+    {
+      "commonName": "Elephant Ear",
+      "scientificName": "Alocasia spp. or Colocasia spp."
+    },
+    {
+      "commonName": "Echeveria",
+      "scientificName": "Echeveria spp."
+    },
+    {
+      "commonName": "Flamingo Lily",
+      "scientificName": "Anthurium andraeanum"
+    },
+    {
+      "commonName": "Burro's Tail",
+      "scientificName": "Sedum morganianum"
+    },
+    {
+      "commonName": "Dwarf Banana Plant",
+      "scientificName": "Musa acuminata 'Dwarf Cavendish'"
+    },
+    {
+      "commonName": "String of Dolphins",
+      "scientificName": "Senecio peregrinus"
+    },
+    {
+      "commonName": "Chinese Fan Palm",
+      "scientificName": "Livistona chinensis"
+    },
+    {
+      "commonName": "Polka Dot Plant",
+      "scientificName": "Hypoestes phyllostachya"
+    },
+    {
+      "commonName": "Jewel Orchid",
+      "scientificName": "Ludisia discolor"
+    },
+    {
+      "commonName": "African Milk Tree",
+      "scientificName": "Euphorbia trigona"
+    },
+    {
+      "commonName": "Castor Bean Plant",
+      "scientificName": "Ricinus communis"
+    },
+    {
+      "commonName": "Silver Dollar Vine",
+      "scientificName": "Dischidia nummularia"
+    },
+    {
+      "commonName": "Fishbone Cactus",
+      "scientificName": "Epiphyllum anguliger"
+    },
+    {
+      "commonName": "Rattlesnake Plant",
+      "scientificName": "Calathea lancifolia"
+    },
+    {
+      "commonName": "Rosemary",
+      "scientificName": "Rosmarinus officinalis"
+    },
+    {
+      "commonName": "Umbrella Tree",
+      "scientificName": "Schefflera actinophylla"
+    },
+    {
+      "commonName": "Baby Toes",
+      "scientificName": "Sedum morganianum (String of Buttons)"
+    },
+    {
+      "commonName": "Air Plant",
+      "scientificName": "Tillandsia spp."
+    },
+    {
+      "commonName": "Peperomia Raindrop",
+      "scientificName": "Peperomia argyreia"
+    },
+    {
+      "commonName": "Dragon Tree",
+      "scientificName": "Dracaena draco"
+    },
+    {
+      "commonName": "String of Bananas",
+      "scientificName": "Senecio radicans 'String of Bananas'"
+    },
+    {
+      "commonName": "Red Prayer Plant",
+      "scientificName": "Maranta leuconeura 'Red Prayer'"
+    },
+    {
+      "commonName": "Hoya Compacta",
+      "scientificName": "Hoya kerrii"
+    },
+    {
+      "commonName": "Purple Heart Plant",
+      "scientificName": "Tradescantia pallida"
+    },
+    {
+      "commonName": "Dwarf Umbrella Tree",
+      "scientificName": "Schefflera arboricola 'Dwarf'"
+    },
+    {
+      "commonName": "Spider Plant Variegata",
+      "scientificName": "Chlorophytum comosum 'Variegatum'"
+    },
+    {
+      "commonName": "Alocasia Polly",
+      "scientificName": "Alocasia x amazonica"
+    },
+    {
+      "commonName": "Calathea Medallion",
+      "scientificName": "Calathea veitchiana 'Medallion'"
+    },
+    {
+      "commonName": "Oxalis Triangularis",
+      "scientificName": "Oxalis triangularis"
+    },
+    {
+      "commonName": "Yucca Cane",
+      "scientificName": "Yucca elephantipes"
+    },
+    {
+      "commonName": "Pink Syngonium",
+      "scientificName": "Syngonium podophyllum 'Pink Allium'"
+    },
+    {
+      "commonName": "Chinese Evergreen Red",
+      "scientificName": "Aglaonema commutatum 'Red'"
+    },
+    {
+      "commonName": "Bird's Nest Snake Plant",
+      "scientificName": "Sansevieria trifasciata 'Hahnii'"
+    },
+    {
+      "commonName": "Swiss Cheese Vine",
+      "scientificName": "Monstera adansonii"
+    },
+    {
+      "commonName": "ZZ Raven Plant",
+      "scientificName": "Zamioculcas zamiifolia 'Raven'"
+    },
+    {
+      "commonName": "Goldfish Plant",
+      "scientificName": "Nematanthus gregarius"
+    },
+    {
+      "commonName": "Velvet Touch Tradescantia",
+      "scientificName": "Tradescantia spathacea 'Velvet Touch'"
+    },
+    {
+      "commonName": "Philodendron Brasil",
+      "scientificName": "Philodendron hederaceum 'Brasil'"
+    },
+    {
+      "commonName": "Hawaiian Ti Plant",
+      "scientificName": "Cordyline fruticosa"
+    },
+    {
+      "commonName": "Purple Waffle Plant",
+      "scientificName": "Hypoestes phyllostachya 'Rosea'"
+    },
+    {
+      "commonName": "Silver Sword Philodendron",
+      "scientificName": "Philodendron hastatum 'Silver Sword'"
+    },
+    {
+      "commonName": "Neon Pothos",
+      "scientificName": "Epipremnum aureum 'Neon'"
+    },
+    {
+      "commonName": "Moon Cactus",
+      "scientificName": "Gymnocalycium mihanovichii"
+    },
+    {
+      "commonName": "African Milk Bush",
+      "scientificName": "Euphorbia trigona"
+    },
+    {
+      "commonName": "String of Turtles",
+      "scientificName": "Peperomia prostrata"
+    },
+    {
+      "commonName": "Angel Wing Begonia",
+      "scientificName": "Begonia coccinea"
+    },
+    {
+      "commonName": "Frosty Fern",
+      "scientificName": "Asplenium trichomanes"
+    },
+    {
+      "commonName": "Painted-Leaf Begonia",
+      "scientificName": "Begonia semperflorens"
+    },
+    {
+      "commonName": "Firestick Plant",
+      "scientificName": "Euphorbia lactea"
+    },
+    {
+      "commonName": "Parlor Ivy",
+      "scientificName": "Scindapsus aureus"
+    },
+    {
+      "commonName": "Moonlight Philodendron",
+      "scientificName": "Philodendron"
+    },
+    {
+      "commonName": "Red Anthurium",
+      "scientificName": "Anthurium andraeanum"
+    },
+    {
+      "commonName": "Climbing Onion",
+      "scientificName": "Tulbaghia violacea"
+    },
+    {
+      "commonName": "Baby Tears",
+      "scientificName": "Soleirolia soleirolii"
+    },
+    {
+      "commonName": "Pilea Involucrata",
+      "scientificName": "Pilea involucrata"
+    },
+    {
+      "commonName": "Crown of Thorns",
+      "scientificName": "Euphorbia milii"
+    },
+    {
+      "commonName": "Lemon Button Fern",
+      "scientificName": "Nephrolepis cordifolia"
+    },
+    {
+      "commonName": "Silver Pothos",
+      "scientificName": "Epipremnum aureum"
+    },
+    {
+      "commonName": "Desert Rose",
+      "scientificName": "Adenium obesum"
+    },
+    {
+      "commonName": "Orchid Cactus",
+      "scientificName": "Epiphyllum anguliger"
+    },
+    {
+      "commonName": "String of Nickels",
+      "scientificName": "Dischidia nummularia"
+    },
+    {
+      "commonName": "Emerald Ripple Peperomia",
+      "scientificName": "Peperomia caperata"
+    },
+    {
+      "commonName": "Red-Edge Dracaena",
+      "scientificName": "Dracaena marginata"
+    },
+    {
+      "commonName": "Creeping Fig",
+      "scientificName": "Ficus pumila"
+    },
+    {
+      "commonName": "Trailing String of Buttons",
+      "scientificName": "Pilea involucrata"
+    },
+    {
+      "commonName": "Zebra Haworthia",
+      "scientificName": "Haworthia fasciata"
+    },
+    {
+      "commonName": "Ribbon Plant",
+      "scientificName": "Rhipsalis spp."
+    },
+    {
+      "commonName": "Silver Lace Fern",
+      "scientificName": "Selaginella kraussiana"
+    },
+    {
+      "commonName": "Trailing Hearts",
+      "scientificName": "Ceropegia woodii"
+    },
+    {
+      "commonName": "Ice Plant",
+      "scientificName": "Delosperma cooperi"
+    }
+  ]
+  

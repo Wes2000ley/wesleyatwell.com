@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Database</title>
+    <link rel="stylesheet" href="/Plants/styles.css">
+    <style>
+        /* Include the CSS styles as discussed above */
+    </style>
+</head>
+<body>
+    <a href="plant.html" style="display: none;"> Plant</a>
+    <div class="container">
+        <!-- Controls for Results Per Page and Search -->
+        <div class="controls">
+
+            <div> 
+                <a href="http://www.wesleyatwell.com" style="padding: 10px 20px;background-color: #2c3e50;color: white;border: none;border-radius: 4px;cursor: pointer;text-decoration: none;"> Home </a>  
+            </div>
+            
+
+            <div class="search-container">
+                <label for="results-per-page">Results per page:</label>
+                <select id="results-per-page">
+                    <option value="5">5</option>
+                    <option value="10" selected>10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+
+            <input type="text" id="search-input" placeholder="Search plants..." aria-label="Search plants" />
+        </div>
+
+
+        <!-- Error Message -->
+        <div id="error-message" class="hidden">
+            <p>Failed to load plants. Please try again later.</p>
+        </div>
+
+        <!-- Plant Grid View -->
+
+        <div id="grid-view">
+            <div class="grid-container" id="grid-container">
+                <!-- Plant cards will be inserted here -->
+            </div>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div id="pagination">
+            <button id="prev-page">Previous</button>
+            <div id="page-numbers"></div>
+            <button id="next-page">Next</button>
+            <span id="current-page">1</span> / <span id="total-pages">1</span>
+        </div>
+    </div>
+
+    <script src="/Plants/script.js"></script>
+</body>
+</html>

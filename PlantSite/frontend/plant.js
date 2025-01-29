@@ -223,8 +223,8 @@ function renderPlantDetails(plant) {
 function generateImageGalleryHTML(plant) {
     let galleryHTML = '';
     for (let i = 1; i <= 5; i++) {
-        const imgSrc = `/images2/${plant.name}/image${i}.jpg`; // Primary image
-        const fallbackSrc = `/images2/${plant.name}/image${i}.png`; // Fallback image (if .jpg fails)
+        const imgSrc = `arn:aws:s3:::wesleyatwell.com.cdn/images2/${plant.name}/image${i}.jpg`; // Primary image
+        const fallbackSrc = `arn:aws:s3:::wesleyatwell.com.cdn/images2/${plant.name}/image${i}.png`; // Fallback image (if .jpg fails)
         const altText = `Image ${i} of ${plant.name}`; // Descriptive alt text
 galleryHTML += `
         <img 

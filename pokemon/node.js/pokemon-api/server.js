@@ -1,9 +1,9 @@
 // server.js
 
-require('dotenv').config();
+require('dotenv').config(); // Load environment variables from .env (optional, since using IAM roles)
 
 const express = require('express');
-const mongoose = require('mongoose');
+const AWS = require('aws-sdk');
 const cors = require('cors');
 
 const app = express();
@@ -13,77 +13,97 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// MongoDB Connection
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/pokemonDB';
-
-mongoose.connect(mongoURI)
-    .then(() => console.log('✅ Connected to MongoDB'))
-    .catch(err => {
-        console.error('❌ MongoDB connection error:', err);
-        process.exit(1);
-    });
-
-// Define Pokémon Schema and Model
-const pokemonSchema = new mongoose.Schema({
-    name: { type: String, unique: true, required: true },
-    types: [String],
-    height: String,
-    weight: String,
-    abilities: [String],
-    sprite: String,
-    art: String,
-    totalBaseStats: Number,
-    habitat: String,
-    color: String,
-    legendary: Boolean,
-    mythical: Boolean,
-    stats: {
-        hp: Number,
-        attack: Number,
-        defense: Number,
-        specialAttack: Number,
-        specialDefense: Number,
-        speed: Number
-    },
-    typeEffectiveness: {
-        no_damage: [String],
-        quarter_damage: [String],
-        half_damage: [String],
-        normal_damage: [String],
-        double_damage: [String],
-        quadruple_damage: [String]
-    },
-    previousEvolution: { type: String, default: 'None' },
-    upcomingEvolution: { type: String, default: 'None' }
+// AWS Configuration
+AWS.config.update({
+    region: process.env.AWS_REGION || 'us-west-1', // Ensure your DynamoDB table is in this region
+    // No need to set accessKeyId and secretAccessKey when using IAM roles
 });
 
-const Pokemon = mongoose.model('Pokemon', pokemonSchema);
+// Initialize DynamoDB Document Client
+const dynamoDB = new AWS.DynamoDB.DocumentClient();
+const TABLE_NAME = process.env.DYNAMODB_TABLE_NAME || 'Pokemon'; // Ensure this matches your DynamoDB table name
 
 // Define Routes
 const router = express.Router();
 
-// GET /api/pokemons - Retrieve all Pokémon
+/**
+ * GET /api/pokemons
+ * Retrieve all Pokémon
+ * Note: DynamoDB Query operation to fetch all items with Category = 'Pokemon'
+ * Implements pagination using LastEvaluatedKey
+ */
 router.get('/pokemons', async (req, res) => {
+    const { lastEvaluatedKey } = req.query; // For pagination
+
+    // Construct the base parameters for the query
+    const params = {
+        TableName: TABLE_NAME,
+        KeyConditionExpression: '#cat = :categoryValue',
+        ExpressionAttributeNames: {
+            '#cat': 'Category' // Attribute name for Partition Key
+        },
+        ExpressionAttributeValues: {
+            ':categoryValue': 'Pokemon' // Value for Partition Key
+        }
+    };
+
+    // If lastEvaluatedKey is provided, decode it and set as ExclusiveStartKey
+    if (lastEvaluatedKey) {
+        try {
+            // DynamoDB expects ExclusiveStartKey as a JSON object
+            params.ExclusiveStartKey = JSON.parse(Buffer.from(lastEvaluatedKey, 'base64').toString('utf-8'));
+        } catch (error) {
+            console.error('Error parsing lastEvaluatedKey:', error);
+            return res.status(400).json({ message: 'Invalid lastEvaluatedKey format' });
+        }
+    }
+
     try {
-        const pokemons = await Pokemon.find({});
-        res.json(pokemons);
+        const data = await dynamoDB.query(params).promise();
+
+        // Encode the LastEvaluatedKey to send back to the client
+        const response = {
+            items: data.Items,
+            lastEvaluatedKey: data.LastEvaluatedKey ? Buffer.from(JSON.stringify(data.LastEvaluatedKey)).toString('base64') : null
+        };
+
+        res.json(response);
     } catch (error) {
-        console.error('Error fetching Pokémon:', error);
+        console.error('Error querying DynamoDB:', error);
         res.status(500).json({ message: 'Internal Server Error' });
     }
 });
 
-// GET /api/pokemons/:name - Retrieve a specific Pokémon by name
-router.get('/pokemons/:name', async (req, res) => {
-    const { name } = req.params;
+/**
+ * GET /api/pokemons/:id
+ * Retrieve a specific Pokémon by ID
+ * Utilizes the primary key (Category and ID) for efficient retrieval
+ */
+router.get('/pokemons/:id', async (req, res) => {
+    const { id } = req.params;
+
+    // Validate that ID is a number
+    const pokemonID = parseInt(id, 10);
+    if (isNaN(pokemonID)) {
+        return res.status(400).json({ message: 'Invalid Pokémon ID. ID must be a number.' });
+    }
+
+    const params = {
+        TableName: TABLE_NAME,
+        Key: {
+            'Category': 'Pokemon', // Partition Key
+            'ID': pokemonID        // Sort Key
+        }
+    };
+
     try {
-        const pokemon = await Pokemon.findOne({ name: name.toLowerCase() });
-        if (!pokemon) {
+        const data = await dynamoDB.get(params).promise();
+        if (!data.Item) {
             return res.status(404).json({ message: 'Pokémon not found' });
         }
-        res.json(pokemon);
+        res.json(data.Item);
     } catch (error) {
-        console.error(`Error fetching Pokémon "${name}":`, error);
+        console.error(`Error fetching Pokémon with ID "${id}":`, error);
         res.status(500).json({ message: 'Internal Server Error' });
     }
 });

@@ -1,10 +1,9 @@
 // server.js
 
-require('dotenv').config(); // Load environment variables from .env (optional, since using IAM roles)
-
 const express = require('express');
 const AWS = require('aws-sdk');
 const cors = require('cors');
+const NodeCache = require('node-cache'); // Moved to the top for better visibility
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,6 +22,9 @@ AWS.config.update({
 const dynamoDB = new AWS.DynamoDB.DocumentClient();
 const TABLE_NAME = process.env.DYNAMODB_TABLE_NAME || 'Pokemon'; // Ensure this matches your DynamoDB table name
 
+// Initialize NodeCache
+const cache = new NodeCache({ stdTTL: 3600 }); // Cache expires in 1 hour
+
 // Define Routes
 const router = express.Router();
 
@@ -33,7 +35,15 @@ const router = express.Router();
  * Implements pagination using LastEvaluatedKey
  */
 router.get('/pokemons', async (req, res) => {
-    const { lastEvaluatedKey } = req.query; // For pagination
+    const { lastEvaluatedKey } = req.query;
+    const cacheKey = `pokemons_${lastEvaluatedKey || 'first_page'}`;
+
+    // Attempt to retrieve cached response
+    const cachedResponse = cache.get(cacheKey);
+    if (cachedResponse) {
+        console.log('Serving /pokemons from cache.');
+        return res.json(cachedResponse);
+    }
 
     // Construct the base parameters for the query
     const params = {
@@ -66,6 +76,10 @@ router.get('/pokemons', async (req, res) => {
             items: data.Items,
             lastEvaluatedKey: data.LastEvaluatedKey ? Buffer.from(JSON.stringify(data.LastEvaluatedKey)).toString('base64') : null
         };
+
+        // Store the response in the cache
+        cache.set(cacheKey, response);
+        console.log(`Caching response for key: ${cacheKey}`);
 
         res.json(response);
     } catch (error) {

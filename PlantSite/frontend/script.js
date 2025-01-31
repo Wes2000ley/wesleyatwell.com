@@ -278,9 +278,9 @@ function renderGridView(plants) {
         imageLink.setAttribute("aria-label", `View details for ${plant.name}`);
 
         // Create the image element
-        const fallbackSrc = `arn:aws:s3:::wesleyatwell.com.cdn/images2/${plant.name}/image1.png`;
+        const fallbackSrc = `s3://wesleyatwell.com.cdn/images2/${plant.name}/image1.png`;
         const img = document.createElement("img");
-        img.src = `arn:aws:s3:::wesleyatwell.com.cdn/images2/${plant.name}/image1.jpg` ; // Primary image or placeholder
+        img.src = `s3://wesleyatwell.com.cdn/images2/${plant.name}/image1.jpg` ; // Primary image or placeholder
         img.alt = `Image of ${plant.name}`;
         img.width = 100;
         img.height = 100;

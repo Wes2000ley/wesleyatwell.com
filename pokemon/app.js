@@ -75,9 +75,48 @@ document.addEventListener("DOMContentLoaded", function() {
      * Asynchronously fetches all Pokémon data from the paginated API.
      */
     async function fetchAllPokemonData() {
+        const CACHE_KEY = 'pokemonData';
+        const CACHE_TIMESTAMP_KEY = 'pokemonDataTimestamp';
+        const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+    
+        // Check if cached data exists
+        const cachedData = localStorage.getItem(CACHE_KEY);
+        const cachedTimestamp = localStorage.getItem(CACHE_TIMESTAMP_KEY);
+        const now = new Date().getTime();
+    
+        if (cachedData && cachedTimestamp) {
+            const age = now - parseInt(cachedTimestamp, 10);
+            if (age < CACHE_DURATION) {
+                try {
+                    console.log('Loading Pokémon data from cache.');
+                    const allPokemons = JSON.parse(cachedData);
+                    
+                    // Assign to global variables
+                    pokemonData = allPokemons;
+                    
+                    // Create the lookup map
+                    pokemonData.forEach(pokemon => {
+                        pokemonMap[pokemon.Name.toLowerCase()] = pokemon;
+                    });
+        
+                    displayPokemonData(); // Display the Pokémon data
+                    updatePaginationControls(); // Initialize pagination controls
+                    return; // Exit the function as data is loaded from cache
+                } catch (parseError) {
+                    console.error('Error parsing cached Pokémon data:', parseError);
+                    // If parsing fails, proceed to fetch fresh data
+                }
+            } else {
+                console.log('Cached Pokémon data is older than 24 hours. Fetching fresh data.');
+            }
+        } else {
+            console.log('No cached Pokémon data found. Fetching data from API.');
+        }
+    
+        // If no valid cache is found, proceed to fetch data from the API
         let allPokemons = [];
-        let lastEvaluatedKey = null
-
+        let lastEvaluatedKey = null;
+    
         try {
             do {
                 const url = new URL('/api/pokemons', window.location.origin);
@@ -92,14 +131,25 @@ document.addEventListener("DOMContentLoaded", function() {
                 allPokemons = allPokemons.concat(data.items);
                 lastEvaluatedKey = data.lastEvaluatedKey;
             } while (lastEvaluatedKey);
-
+    
             // Assign to global variables
             pokemonData = allPokemons;
+    
             // Create the lookup map
             pokemonData.forEach(pokemon => {
                 pokemonMap[pokemon.Name.toLowerCase()] = pokemon;
             });
-
+    
+            // Cache the fetched data and the current timestamp
+            try {
+                localStorage.setItem(CACHE_KEY, JSON.stringify(allPokemons));
+                localStorage.setItem(CACHE_TIMESTAMP_KEY, now.toString());
+                console.log('Pokémon data cached successfully.');
+            } catch (storageError) {
+                console.error('Error caching Pokémon data:', storageError);
+                // If caching fails, proceed without interrupting the user experience
+            }
+    
             displayPokemonData(); // Display the Pokémon data
             updatePaginationControls(); // Initialize pagination controls
         } catch (error) {

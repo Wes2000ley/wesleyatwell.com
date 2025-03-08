@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess AI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chessboard-1.0.0.min.css">
+</head>
+<body>
+
+    <h1>Play Chess vs Stockfish AI</h1>
+
+    <!-- Difficulty Selection -->
+    <label for="difficulty">AI Difficulty:</label>
+    <select id="difficulty" onchange="setDifficulty()">
+        <option value="2">Beginner</option>
+        <option value="5" selected>Easy</option>
+        <option value="10">Medium</option>
+        <option value="15">Hard</option>
+        <option value="20">Expert</option>
+    </select>
+
+    <div class="game-container">
+        <!-- Captured Pieces - White -->
+        <div class="captured-container">
+            <h2>White Captured</h2>
+            <div id="captured-white"></div>
+        </div>
+
+        <!-- Chessboard -->
+        <div id="board"></div>
+
+        <!-- Captured Pieces - Black -->
+        <div class="captured-container">
+            <h2>Black Captured</h2>
+            <div id="captured-black"></div>
+        </div>
+    </div>
+    
+    <button onclick="resetGame()">Restart Game</button>
+
+    <!-- Chess Rules Table -->
+    <div class="rules-container">
+        <h2>Chess Rules</h2>
+        <table>
+            <tr>
+                <th>Piece</th>
+                <th>Movement</th>
+            </tr>
+            <tr>
+                <td>♔ King</td>
+                <td>One square in any direction</td>
+            </tr>
+            <tr>
+                <td>♕ Queen</td>
+                <td>Any number of squares in any direction</td>
+            </tr>
+            <tr>
+                <td>♖ Rook</td>
+                <td>Any number of squares horizontally or vertically</td>
+            </tr>
+            <tr>
+                <td>♗ Bishop</td>
+                <td>Any number of squares diagonally</td>
+            </tr>
+            <tr>
+                <td>♘ Knight</td>
+                <td>"L" shape: Two squares in one direction, then one sideways</td>
+            </tr>
+            <tr>
+                <td>♙ Pawn</td>
+                <td>Moves forward one, captures diagonally, can move two on first move</td>
+            </tr>
+        </table>
+
+        <h3>Special Moves</h3>
+        <ul>
+            <li><strong>Castling</strong>: King moves two squares towards a rook; rook jumps over.</li>
+            <li><strong>En Passant</strong>: A pawn can capture an adjacent pawn that moved two squares.</li>
+            <li><strong>Promotion</strong>: Pawns reaching the last rank promote to a queen, rook, bishop, or knight.</li>
+        </ul>
+
+        <h3>Win Conditions</h3>
+        <ul>
+            <li><strong>Checkmate</strong>: The king is trapped with no legal moves.</li>
+            <li><strong>Stalemate</strong>: A player has no legal moves, but the king is not in check (draw).</li>
+            <li><strong>Draw</strong>: Insufficient material, threefold repetition, or 50-move rule.</li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+    <script src="chess.min.js"></script>
+    <script src="js/chessboard-1.0.0.js"></script>
+    <script src="stockfish.js"></script>
+    <script src="chess-ai.js"></script>
+
+</body>
+</html>

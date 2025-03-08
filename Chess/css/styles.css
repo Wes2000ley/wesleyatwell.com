@@ -169,3 +169,22 @@ button:hover {
     border-bottom: none;
 }
 
+/* Home Button */
+.home-button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #303030;
+    color: white;
+    border: 2px solid #555;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.home-button:hover {
+    background: #444;
+    border-color: #777;
+}

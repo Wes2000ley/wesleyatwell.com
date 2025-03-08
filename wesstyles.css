@@ -65,6 +65,10 @@ body {
     background-color: rgb(46, 79, 224);
 }
 
+.square-link.chess {
+    background-color: rgb(224, 46, 165);
+}
+
 .square-link:hover {
     background-color: #333;
     color: #00ccff;

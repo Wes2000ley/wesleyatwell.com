@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="wesstyles.css" />
 </head>
 <body>
+<button id="resetIntro" style="position: fixed; top: 1rem; left: 1rem; z-index: 10000; background: #222; color: #fff; border: 2px solid #0ff; padding: 0.5rem 1rem; cursor: pointer; font-weight: bold; font-size: 0.9rem;">
+        Reset Intro
+</button>
+      
 
 <!-- ───── STAR-WARS INTRO ───── -->
 <section id="intro" class="intro">
@@ -68,33 +72,58 @@
         <a class="card plants"  href="/Plants"><span>Plants</span></a>
         <a class="card chess"   href="/Chess"><span>Chess</span></a>
     </nav>
+    
 </main>
 
 <script>
-/* ── INTRO TIMING ── */
-const intro     = document.getElementById('intro');
-const main      = document.getElementById('main');
-const skipBtn   = document.getElementById('skip');
-
-/*  Blue     4 s
-    Logo     6 s
-    Crawl   45 s
-    ----------------
-    Total   55 s  */
-const INTRO_MS = 55_000;
-
-function endIntro(){
-    intro.classList.add('fadeout');
-    setTimeout(()=>{
+    /* ── INTRO TIMING ── */
+    const intro     = document.getElementById('intro');
+    const main      = document.getElementById('main');
+    const skipBtn   = document.getElementById('skip');
+    const resetBtn  = document.getElementById('resetIntro'); // RESET button
+    
+    /* Intro Timing */
+    const INTRO_MS = 55_000;
+    const DAY_MS = 24 * 60 * 60 * 1000; // 1 day in milliseconds
+    
+    /* Hide reset button during intro */
+    resetBtn.style.display = 'none';
+    
+    /* Get introPlayed data */
+    const introDataRaw = localStorage.getItem('introPlayed');
+    const introData = introDataRaw ? JSON.parse(introDataRaw) : null;
+    const now = Date.now();
+    
+    /* End intro function */
+    function endIntro() {
+        intro.classList.add('fadeout');
+        setTimeout(() => {
+            intro.remove();
+            main.classList.remove('hidden');
+            requestAnimationFrame(() => main.classList.add('reveal'));
+            resetBtn.style.display = 'block'; // ← show the reset button AFTER intro
+        }, 1200);
+    
+        localStorage.setItem('introPlayed', JSON.stringify({ time: now }));
+    }
+    
+    /* Check if intro should play */
+    if (introData && (now - introData.time < DAY_MS)) {
         intro.remove();
         main.classList.remove('hidden');
-        /* start hero + card animations */
-        requestAnimationFrame(()=>main.classList.add('reveal'));
-    }, 1_200);          // matches fadeout keyframe
-}
+        requestAnimationFrame(() => main.classList.add('reveal'));
+        resetBtn.style.display = 'block'; // ← show button immediately if skipping intro
+    } else {
+        setTimeout(endIntro, INTRO_MS);
+        skipBtn.addEventListener('click', endIntro);
+    }
+    
+    /* RESET BUTTON logic */
+    resetBtn.addEventListener('click', () => {
+        localStorage.removeItem('introPlayed');
+        location.reload();
+    });
+    </script>
 
-setTimeout(endIntro, INTRO_MS);
-skipBtn.addEventListener('click', endIntro);
-</script>
 </body>
 </html>

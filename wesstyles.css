@@ -1,110 +1,295 @@
-/* Reset some default browser styles */
-body, h1, p, a {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    box-sizing: border-box;
+/* ─── RESET ─── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+html,
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Changed from 90vh to ensure full viewport height */
-    background-color: #121212;
-    font-family: 'Arial', sans-serif;
-    color: #ffffff;
-    padding: 20px; /* Added padding for smaller screens */
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow: hidden;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px; /* Limit the maximum width for larger screens */
+/* ─── THEME ─── */
+:root {
+  --bg-1: #05050d;
+  --bg-2: #0d0e24;
+  --fg:   #f3f3f3;
+  --accent:       #00c8ff;
+  --crawl-yellow: #ffe81f;
 }
 
-.square-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45%; /* Use percentage for responsiveness */
-    padding: 45%; /* Maintain square aspect ratio */
-    position: relative; /* For absolute positioning of content */
-    background-color: #1e1e1e;
-    color: #ffffff;
-    font-size: 1.2rem;
-    border: 2px solid #333;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    text-align: center;
+/* ─── BACKGROUND & STARFIELD ─── */
+body {
+  position: relative;
+  color: var(--fg);
+  background: radial-gradient(circle at 25% 35%, var(--bg-2) 0%, var(--bg-1) 75%);
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%23ffffff' opacity='0.35'%3E%3Ccircle cx='6' cy='40' r='1.2'/%3E%3Ccircle cx='80' cy='12' r='1.3'/%3E%3Ccircle cx='14' cy='80' r='1'/%3E%3Ccircle cx='60' cy='60' r='0.9'/%3E%3Ccircle cx='92' cy='92' r='1.1'/%3E%3C/svg%3E");
+  background-size: 100px 100px;
+  background-repeat: repeat;
+  animation: stars 90s linear infinite;
+  z-index: -1;
+}
+@keyframes stars {
+  from { background-position: 0 0; }
+  to   { background-position: 0 -900px; }
 }
 
-.square-link::after {
+/* ───────────── INTRO ───────────── */
+.intro {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* 1) Blue text */
+.faraway {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: clamp(3.2rem, 9.6vw + 1.6rem, 9.6rem);
+    line-height: 1.05;
+    color: #4bd5ff;
+    letter-spacing: 0.02em;
+    white-space: nowrap; /* optional if you want it to stay in one line */
+    opacity: 0;
+    animation: far 4s ease-out forwards;
+  }
+@keyframes far {
+  0%, 5%   { opacity: 0; }
+  15%, 85% { opacity: 1; }
+  100%     { opacity: 0; }
 }
 
-.square-link.Solar {
-    background-color: blueviolet;
+/* 2) STAR WARS logo — centered & full-screen, then fades up/out */
+.logoWrapper {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  perspective: 800px;
+  width: 100vw;
+  height: auto;
+}
+.logo {
+    position: relative;
+    z-index: 1;
+    font-weight: 900;
+    line-height: 0.8;
+    text-align: center;
+    color: var(--crawl-yellow);
+    font-size: clamp(8rem, 18vw, 18rem);
+    transform-origin: center 60%;
+    /* 6s duration, delayed 4s, ease-out gives a smooth exit */
+    animation: logoFly 40s ease-out forwards 4s;
+    opacity: 0;
+  }
+.logo .top,
+.logo .bot {
+  display: block;
 }
 
-.square-link.Frog {
-    background-color: green;
-}
-
-.square-link.pokemon {
-    background-color: red;
-}
-
-.square-link.plants {
-    background-color: rgb(46, 79, 224);
-}
-
-.square-link.chess {
-    background-color: rgb(209, 37, 180);
-}
-
-.square-link:hover {
-    background-color: #333;
-    color: #00ccff;
-    border-color: #00ccff;
-    transform: scale(1.05); /* Slightly reduced scale for better mobile experience */
-}
-
-.square-link:active {
-    transform: scale(1);
-}
-
-/* Media Queries for Responsiveness */
-
-/* Tablets and larger devices */
-@media (min-width: 600px) {
-    .square-link {
-        width: 30%;
-        padding: 30%; /* Maintain square aspect ratio */
-        font-size: 1.5rem;
+@keyframes logoFly {
+    /* at t=4s (animation start): fully visible, centered */
+    0% {
+      opacity: 1;
+      transform: rotateX(0deg) translateZ(0) translateY(0) scale(1);
     }
+    5% {
+        opacity: 1;
+        transform: rotateX(0deg) translateZ(0) translateY(0) scale(1);
+      }
+    /* hold that full-size/visible until halfway through */
+    50% {
+      opacity: 1;
+      transform: rotateX(25deg) translateZ(-600px) translateY(-1200px) scale(0.1);
+    }
+    /* by 100% (t=10s): both faded out and scrolled up */
+    100% {
+      opacity: 0;
+      transform: rotateX(25deg) translateZ(-700px) translateY(-2000px) scale(0.1);
+    }
+  }
+
+/* 3) Opening crawl — now *starts* at 8s so it overlaps logo fade */
+.crawlWrapper {
+  perspective: 600px;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  margin-top: 0;
+}
+.crawl {
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
+  line-height: 1.15;
+  color: var(--crawl-yellow);
+  transform-origin: 50% 100%;
+  opacity: 0;
+  animation: crawl 60s linear forwards 7s; /* now 8–53s */
+}
+@keyframes crawl {
+  0%   { opacity: 0; transform: rotateX(25deg) translateZ(0)      translateY(50%); }
+  2%   { opacity: 1; }
+  100% { opacity: 1; transform: rotateX(25deg) translateZ(-500px) translateY(-200%); }
+}
+.crawl > * {
+  margin: 0 0 1.4em;
+}
+.crawl .episode {
+  text-align: center;
+  letter-spacing: 0.14em;
+}
+.crawl h1 {
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 1em;
+  text-transform: uppercase;
 }
 
-/* Desktops and larger devices */
-@media (min-width: 1024px) {
-    .square-link {
-        width: 22%;
-        padding: 22%; /* Maintain square aspect ratio */
-        font-size: 1.8rem;
-    }
+/* Skip & fadeout */
+#skip {
+  position: absolute;
+  bottom: 2rem; right: 2rem;
+  padding: .45rem .9rem;
+  border: 2px solid var(--crawl-yellow);
+  background: rgba(0,0,0,.38);
+  color: var(--crawl-yellow);
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background .25s;
+}
+#skip:hover {
+  background: rgba(0,0,0,.6);
+}
+.fadeout {
+  animation: fadeout 1.2s ease forwards;
+}
+@keyframes fadeout {
+  to { opacity: 0; }
 }
 
-/* Mobile devices */
-@media (max-width: 599px) {
-    .square-link {
-        width: 100%;
-        padding: 100%; /* Full width to maintain square */
-        font-size: 1.2rem;
-    }
+/* ───────────── MAIN SITE ───────────── */
+.hidden { display: none; }
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3vmin;
+  opacity: 0;
+  transform: translateY(32px);
+}
+.hero.reveal {
+  animation: heroFade .9s ease-out forwards;
+}
+@keyframes heroFade {
+  to { opacity: 1; transform: none; }
+}
+
+/* Brand & grid */
+.brand {
+  font-size: clamp(1.9rem, 4vw + 1rem, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+.brand .dot { color: var(--accent); }
+.grid {
+  width: min(92vw, 1200px);
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px,100%),1fr));
+}
+
+/* Cards */
+.card {
+  position: relative;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  font-size: clamp(1rem, 1.2vw + .6rem, 1.35rem);
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--fg);
+  transform: perspective(800px) rotateX(var(--rx,0)) rotateY(var(--ry,0)) scale(1);
+  transition: transform .25s ease, box-shadow .25s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,.45);
+  overflow: hidden;
+  opacity: 0;
+  transform-origin: center bottom;
+}
+.card span { position: relative; z-index: 1; }
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(255,255,255,.1), rgba(255,255,255,0));
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.hero.reveal .card { animation: cardFade .8s ease-out forwards; }
+.hero.reveal .card:nth-child(1) { animation-delay: .15s; }
+.hero.reveal .card:nth-child(2) { animation-delay: .30s; }
+.hero.reveal .card:nth-child(3) { animation-delay: .45s; }
+.hero.reveal .card:nth-child(4) { animation-delay: .60s; }
+.hero.reveal .card:nth-child(5) { animation-delay: .75s; }
+@keyframes cardFade {
+  0%   { opacity: 0; transform: translateY(28px) scale(.95); }
+  100% { opacity: 1; transform: translateY(0)     scale(1); }
+}
+
+/* Project colors */
+.solar   { background: linear-gradient(135deg, #a84bff, #7037ff); }
+.frog    { background: linear-gradient(135deg, #4caf50, #2e8b57); }
+.pokemon { background: linear-gradient(135deg, #ff4747, #e92c2c); }
+.plants  { background: linear-gradient(135deg, #1e7fff, #0e4dff); }
+.chess   { background: linear-gradient(135deg, #e400d7, #9e00a9); }
+
+/* Hover & touch */
+.card:hover,
+.card:focus-visible {
+  transform: perspective(800px)
+    rotateX(var(--rx,0)) rotateY(var(--ry,0)) scale(1.06);
+  box-shadow:
+    0 10px 26px rgba(0,0,0,.55),
+    0 0 12px 4px rgba(0,200,255,.25);
+}
+.card:hover::before,
+.card:focus-visible::before { opacity: 1; }
+.card:hover span,
+.card:focus-visible span     { text-shadow: 0 1px 6px rgba(0,0,0,.4); }
+
+@media (hover:hover) {
+  .card { cursor: pointer; }
+  .card:hover { will-change: transform; }
+}
+@media (hover:none) {
+  .card { transition: box-shadow .3s ease; }
+  .card:active {
+    transform: scale(.97);
+    box-shadow: 0 3px 10px rgba(0,0,0,.4);
+  }
+}
+@media (max-width:480px) {
+  .brand { margin-bottom: 1.5rem; }
 }

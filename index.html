@@ -1,18 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoverable Square Links</title>
-    <link rel="stylesheet" href="wesstyles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Wesley Atwell • Projects Hub</title>
+    <meta name="description" content="Jump to Wesley’s projects: Solar System, Frogopedia, Pokédex, Plants, and Chess." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="wesstyles.css" />
 </head>
 <body>
-    <div class="container">
-        <a href="OurSolarSystem/index.html" class="square-link Solar">OurSolarSystem</a>
-        <a href="FrogWeb/index.html" class="square-link Frog">Frogopedia</a>
-        <a href="pokemon/index.html" class="square-link pokemon">Pokedex</a>
-        <a href="/Plants" class="square-link plants">Plants</a>
-        <a href="/Chess" class="square-link chess">Chess</a>
+
+<!-- ───── STAR-WARS INTRO ───── -->
+<section id="intro" class="intro">
+
+    <!-- 1) Blue text -->
+    <div class="faraway">A long time ago<br>in a basement far,<br>far away…</div>
+
+    <!-- 2) Yellow STAR WARS logo -->
+    <div class="logoWrapper">
+        <div class="logo">
+            <span class="top">WESLEY</span>
+            <span class="bot">ATWELL</span>
+        </div>
     </div>
+<!-- 3) Opening crawl -->
+<div class="crawlWrapper">
+    <div class="crawl">
+      <p class="episode">EPISODE&nbsp;I</p>
+      <h1>WESLEY&nbsp;ATWELL</h1>
+      
+      <p>It is a period of relentless ambition.</p>
+      <p>In the shadows of forgotten servers and broken hyperlinks, a lone coder rises. Fueled by caffeine and an ancient hunger for creation, Wesley Atwell forges ahead into the unknown void of the web.</p>
+      
+      <p>Seeking balance where chaos reigns, he embarks on a journey through realms of his own design: a sprawling SOLAR SYSTEM of majestic orbits, a living FROGOPEDIA teeming with secrets, a mighty POKÉDEX capturing the creatures of legend, a flourishing PLANTS archive breathing life into barren code, and a CHESS battleground where kings and pawns wage eternal war.</p>
+      
+      <p>But the path is treacherous. Bugs swarm like asteroids, deadlines tighten like tractor beams, and temptation lurks at every turn, from endless snack breaks to the dark side of procrastination.</p>
+      
+      <p>Undeterred, Wesley weaves code into constellations, databases into empires, and pages into portals between worlds. His fingertips blaze across keyboards like twin suns racing across the horizon of possibility.</p>
+      
+      <p>Allies are few. StackOverflow provides guidance, GitHub grants weapons of wisdom, but in the end, the battle must be fought alone — with courage, patience, and perhaps a little CSS magic.</p>
+      
+      <p>As stars flicker and timelines stretch thin, a new hope emerges. For if even a single visitor journeys across these crafted realms and smiles, the mission will not have been in vain.</p>
+      
+      <p>The fate of creativity rests not in grand armies, but in the hands of one determined developer standing against the storm.</p>
+      
+      <p>Victory is uncertain. The challenge is immense. But Wesley Atwell will not yield.</p>
+      
+      <p>May the&nbsp;<span class="accent">source code</span>&nbsp;be with him. Always.</p>
+    </div>
+  </div>
+  
+
+    <!-- Skip button -->
+    <button id="skip">Skip ►</button>
+</section>
+
+<!-- ───── MAIN SITE CONTENT ───── -->
+<main id="main" class="hero hidden">
+    <h1 class="brand">Wesley&nbsp;Atwell</h1>
+
+    <nav class="grid">
+        <a class="card solar"   href="OurSolarSystem/index.html"><span>Our&nbsp;Solar&nbsp;System</span></a>
+        <a class="card frog"    href="FrogWeb/index.html"><span>Frogopedia</span></a>
+        <a class="card pokemon" href="pokemon/index.html"><span>Pokédex</span></a>
+        <a class="card plants"  href="/Plants"><span>Plants</span></a>
+        <a class="card chess"   href="/Chess"><span>Chess</span></a>
+    </nav>
+</main>
+
+<script>
+/* ── INTRO TIMING ── */
+const intro     = document.getElementById('intro');
+const main      = document.getElementById('main');
+const skipBtn   = document.getElementById('skip');
+
+/*  Blue     4 s
+    Logo     6 s
+    Crawl   45 s
+    ----------------
+    Total   55 s  */
+const INTRO_MS = 55_000;
+
+function endIntro(){
+    intro.classList.add('fadeout');
+    setTimeout(()=>{
+        intro.remove();
+        main.classList.remove('hidden');
+        /* start hero + card animations */
+        requestAnimationFrame(()=>main.classList.add('reveal'));
+    }, 1_200);          // matches fadeout keyframe
+}
+
+setTimeout(endIntro, INTRO_MS);
+skipBtn.addEventListener('click', endIntro);
+</script>
 </body>
 </html>

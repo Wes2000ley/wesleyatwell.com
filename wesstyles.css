@@ -253,6 +253,7 @@ body::after {
 .hero.reveal .card:nth-child(3) { animation-delay: .45s; }
 .hero.reveal .card:nth-child(4) { animation-delay: .60s; }
 .hero.reveal .card:nth-child(5) { animation-delay: .75s; }
+.hero.reveal .card:nth-child(6) { animation-delay: .90s; }
 @keyframes cardFade {
   0%   { opacity: 0; transform: translateY(28px) scale(.95); }
   100% { opacity: 1; transform: translateY(0)     scale(1); }
@@ -264,6 +265,7 @@ body::after {
 .pokemon { background: linear-gradient(135deg, #ff4747, #e92c2c); }
 .plants  { background: linear-gradient(135deg, #1e7fff, #0e4dff); }
 .chess   { background: linear-gradient(135deg, #e400d7, #9e00a9); }
+.mebattle   { background: linear-gradient(135deg, #df7f02, #d86800); }
 
 /* Hover & touch */
 .card:hover,

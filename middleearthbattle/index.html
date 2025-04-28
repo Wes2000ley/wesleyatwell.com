@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clash of Middle-earth: Army Builder</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>⚔️ Clash of Middle-earth ⚔️</h1>
+  <h2>Army Builder</h2>
+
+  <!-- ✅ Back Button -->
+  <div class="section">
+    <button onclick="goBack()">⬅️ Back to Main Menu</button>
+  </div>
+
+  <div class="section">
+    <h3>Settings</h3>
+    Max Points: <input type="number" id="maxPoints" value="100" min="10" step="10">
+    <br><br>
+    <button id="resetArmy">Reset Army</button>
+  </div>
+
+  <div class="section">
+    <h3>Pick Your Faction</h3>
+    <select id="factionSelect"></select>
+  </div>
+
+  <div class="section" id="armyBuilder" style="display:none;">
+    <h3 id="factionName"></h3>
+
+    <div id="unitPicker"></div>
+
+    <h4>Choose Leader</h4>
+    <select id="leaderSelect"></select>
+    <div id="leaderInfo" class="infoBox"></div>
+
+    <h4>Choose Artifact</h4>
+    <select id="artifactSelect"></select>
+    <div id="artifactInfo" class="infoBox"></div>
+
+    <div class="result" id="pointsDisplay">Points Used: 0 / 100</div>
+
+    <br>
+    <button id="doneBuilding">Done Building (Generate Enemy Army)</button>
+  </div>
+
+  <div class="section" id="enemyArmy" style="display:none;">
+    <h3>Enemy Army</h3>
+    <div id="enemyFactionName"></div>
+    <div id="enemyUnitList"></div>
+    <div id="enemyLeader"></div>
+    <div id="enemyArtifact"></div>
+    <div id="enemyPoints"></div>
+
+    <br>
+    <button id="startBattle">⚔️ Start Battle!</button> <!-- ✅ Start Battle Button -->
+  </div>
+
+  <div class="section" id="battleLogSection" style="display:none;">
+    <h3>Battle Log</h3>
+    <div id="battleLog" class="infoBox"></div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+
+  <!-- ✅ Script for Back Button -->
+  <script>
+    function goBack() {
+      window.location.href = "../index.html";  // <- Go one folder up (to folder index)
+    }
+  </script>
+
+</body>
+</html>

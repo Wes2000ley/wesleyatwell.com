@@ -254,19 +254,40 @@ body::after {
 .hero.reveal .card:nth-child(4) { animation-delay: .60s; }
 .hero.reveal .card:nth-child(5) { animation-delay: .75s; }
 .hero.reveal .card:nth-child(6) { animation-delay: .90s; }
+.hero.reveal .card:nth-child(7) { animation-delay: 1.05s; }
 @keyframes cardFade {
   0%   { opacity: 0; transform: translateY(28px) scale(.95); }
   100% { opacity: 1; transform: translateY(0)     scale(1); }
 }
 
-/* Project colors */
-.solar   { background: linear-gradient(135deg, #a84bff, #7037ff); }
-.frog    { background: linear-gradient(135deg, #4caf50, #2e8b57); }
-.pokemon { background: linear-gradient(135deg, #ff4747, #e92c2c); }
-.plants  { background: linear-gradient(135deg, #1e7fff, #0e4dff); }
-.chess   { background: linear-gradient(135deg, #e400d7, #9e00a9); }
-.mebattle   { background: linear-gradient(135deg, #df7f02, #d86800); }
+/* Project colors - improved */
+.solar {
+  background: linear-gradient(135deg, #9b59b6, #6c3483); /* Deep space purple blend */
+}
 
+.frog {
+  background: linear-gradient(135deg, #66bb6a, #388e3c); /* Vibrant fresh green */
+}
+
+.pokemon {
+  background: linear-gradient(135deg, #ff6b6b, #c0392b); /* Energetic Pokémon red */
+}
+
+.plants {
+  background: linear-gradient(135deg, #42a5f5, #1e88e5); /* Sky blue to royal blue */
+}
+
+.chess {
+  background: linear-gradient(135deg, #ab47bc, #8e24aa); /* Regal purple for chess */
+}
+
+.mebattle {
+  background: linear-gradient(135deg, #ffa726, #fb8c00); /* Battle fiery orange */
+}
+
+.github {
+  background: linear-gradient(135deg, #757575, #424242); /* Sleek GitHub dark gray */
+}
 /* Hover & touch */
 .card:hover,
 .card:focus-visible {

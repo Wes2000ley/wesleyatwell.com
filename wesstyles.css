@@ -8,10 +8,13 @@
 }
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   font-family: 'Inter', system-ui, sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
+
 
 /* ─── THEME ─── */
 :root {
@@ -192,11 +195,12 @@ body::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* ← allow vertical stacking */
   padding: 3vmin;
   opacity: 0;
   transform: translateY(32px);
 }
+
 .hero.reveal {
   animation: heroFade .9s ease-out forwards;
 }
